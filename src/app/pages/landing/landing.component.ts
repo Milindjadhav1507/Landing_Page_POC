@@ -69,7 +69,7 @@ export class LandingComponent implements OnInit {
     },
     {
       name: 'Manufacturing',
-      link: 'https://esarwaanalitics.web.app/',
+      link: 'https://esarwa-garment-manufactu-f0140.web.app/login',
       description: 'Manufacturing process management',
       icon: 'fas fa-industry',
       color: 'bg-red-500'
