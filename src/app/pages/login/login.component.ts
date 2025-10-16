@@ -44,8 +44,8 @@ export class LoginComponent {
       // Use auth service for authentication
       if (this.authService.login(this.loginData.email, this.loginData.password)) {
         console.log('Login successful!', this.loginData);
-        // Navigate to dashboard after successful login
-        this.router.navigate(['/dashboard']);
+        // Navigate to landing page after successful login
+        this.router.navigate(['/landing']);
       } else {
         this.errorMessage = 'Invalid email or password. Try admin@example.com / password';
       }

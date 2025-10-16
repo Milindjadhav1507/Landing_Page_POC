@@ -1,0 +1,97 @@
+<!-- Landing Page with ERP Modules -->
+<div class="min-h-screen bg-gray-50 py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header Section -->
+    <div class="text-center mb-12">
+      <!-- eSarwa Logo -->
+      <div class="flex justify-center mb-6">
+        <img src="images/logo/e_logo.svg" alt="eSarwa Logo" class="w-48 h-auto">
+      </div>
+      
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">
+        Welcome to eSarwa ERP Suite
+      </h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Access all your business management modules from one central location. 
+        Choose from our comprehensive suite of ERP solutions designed to streamline your operations.
+      </p>
+    </div>
+
+    <!-- ERP Modules Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <div 
+        *ngFor="let module of erpModules" 
+        class="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group"
+        (click)="openModule(module)"
+      >
+        <!-- Module Card -->
+        <div class="p-6">
+          <!-- Icon and Color -->
+          <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-lg {{module.color}} text-white text-2xl group-hover:scale-110 transition-transform duration-300">
+            <i class="{{module.icon}}"></i>
+          </div>
+          
+          <!-- Module Name -->
+          <h3 class="text-xl font-semibold text-gray-900 text-center mb-2 group-hover:text-blue-600 transition-colors">
+            {{module.name}}
+          </h3>
+          
+          <!-- Description -->
+          <p class="text-gray-600 text-center text-sm mb-4 leading-relaxed">
+            {{module.description}}
+          </p>
+          
+          <!-- Access Button -->
+          <div class="text-center">
+            <span class="inline-flex items-center px-4 py-2 bg-blue-50 text-blue-700 rounded-lg text-sm font-medium group-hover:bg-blue-100 transition-colors">
+              Access Module
+              <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional Information Section -->
+    <div class="mt-16 bg-white rounded-lg shadow-md p-8">
+      <div class="text-center">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">
+          Why Choose eSarwa ERP?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+          <div class="text-center">
+            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-bolt text-blue-600 text-xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Fast & Reliable</h3>
+            <p class="text-gray-600">Lightning-fast performance with 99.9% uptime guarantee</p>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-shield-alt text-green-600 text-xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Secure & Compliant</h3>
+            <p class="text-gray-600">Enterprise-grade security with full compliance standards</p>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-heart text-purple-600 text-xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">User Friendly</h3>
+            <p class="text-gray-600">Intuitive interface designed for maximum productivity</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="mt-12 text-center text-gray-500">
+      <p>&copy; 2024 eSarwa ERP Suite. All rights reserved.</p>
+    </div>
+  </div>
+</div>
